@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'pl.zajavka'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    jgitVersion = '6.1.0.202203080745-r'
+    lombokVersion = '1.18.24'
+}
+
+dependencies {
+    implementation "org.eclipse.jgit:org.eclipse.jgit:$jgitVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
