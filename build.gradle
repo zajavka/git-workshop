@@ -11,12 +11,15 @@ repositories {
 }
 
 ext {
-    jgitVersion = '6.1.0.202203080745-r'
-    lombokVersion = '1.18.24'
+    jgitVersion = "6.1.0.202203080745-r"
+    lombokVersion = "1.18.24"
+    slf4jVersion = "1.7.36"
 }
 
 dependencies {
     implementation "org.eclipse.jgit:org.eclipse.jgit:$jgitVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    implementation "org.slf4j:slf4j-simple:$slf4jVersion"
 
     compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
